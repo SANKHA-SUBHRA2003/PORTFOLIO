@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #1f242d; /* Greyish blue background color */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .title-box {
+            text-align: center;
+            border: 2px solid #00f0ff; /* Box around the title */
+            padding: 10px;
+            text-shadow: 0 0 10px #00f0ff;
+            text-decoration-line: underline;
+            text-decoration-style: dotted;
+            color: #fff;
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .gallery img {
+            margin: 10px;
+            max-width: 100%; /* Keeps the original aspect ratio */
+            max-height: 400px; /* Set the maximum height for better layout */
+            transition: transform 0.3s; /* Add the transition effect */
+            border: 10px solid rgba(0, 240, 255, 0.7); /* Neon blue border with reduced opacity */
+        }
+
+        /* Scale the image on hover for a "pop-up" effect */
+        .gallery img:hover {
+            transform: scale(0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="title-box">My Gallery</div>
+
+    <div class="gallery">
+        <!-- Replace the following image source URLs with your own image URLs -->
+        <img src="./1.png" alt="Image 1">
+        <img src="./2.png" alt="Image 2">
+        <img src="./3.png" alt="Image 3">
+        <img src="./4.png" alt="Image 4">
+        <img src="./5.png" alt="Image 5">
+        <img src="./6.png" alt="Image 6">
+        <img src="./7.png" alt="Image 7">
+        <img src="./8.png" alt="Image 8">
+        <img src="./9.png" alt="Image 9">
+        <img src="./10.png" alt="Image 10">
+        <img src="./11.png" alt="Image 11">
+        <img src="./12.png" alt="Image 12">
+        <img src="./13.png" alt="Image 13">
+        <img src="./14.png" alt="Image 14">
+        <img src="./15.png" alt="Image 15">
+        <img src="./16.png" alt="Image 16">
+        <img src="./17.png" alt="Image 17">
+        <img src="./18.png" alt="Image 18">
+        <img src="./19.png" alt="Image 19">
+        <img src="./20.png" alt="Image 20">
+        <!-- You can add more images as needed -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Projects</title>
+    <style>
+        body {
+            background-color: #1f242d;
+            color: #0ef;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1f242d;
+            padding: 20px;
+            text-align: center;
+        }
+        #title-box {
+            border: 2px solid #0ef;
+            padding: 10px;
+            text-shadow: 0 0 10px #0ef;
+            text-decoration-line: underline;
+            text-decoration-style: dotted;
+            color: #fff;
+        }
+        section {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .video-tile {
+            width: 45%;
+            margin-bottom: 20px;
+            cursor: pointer;
+            text-align: center;
+            position: relative;
+        }
+
+        .tile-content {
+            padding: 10px;
+            border: 1px solid #1f242d;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .tile-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .popup-menu {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            background-color: #1f242d;
+            border: 3px double #0ef;
+            border-radius: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .popup-menu a {
+            color: #0ef;
+            text-decoration: none;
+            display: block;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .popup-menu a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="title-box">
+            <h1>Mini Projects</h1>
+        </div>
+    </header>
+    <section>
+        <div class="video-tile" onmouseover="showPopupMenu('popup-menu-1')" onmouseout="hidePopupMenu('popup-menu-1')">
+            <div class="tile-content">
+                <h2>Color Google Dino</h2>
+                <img src="./dino.jpg" alt="Google Color Dino">
+                <p>Python made google dino game in colored version</p>
+            </div>
+            <div class="popup-menu" id="popup-menu-1">
+                <a onclick="playVideo('DINO.mp4')">Show Demo</a>
+                <a href="https://github.com/SANKHA-SUBHRA2003/Google-Color-Dino" target="_blank">Take me to GitHub</a>
+            </div>
+        </div>
+
+        <div class="video-tile" onmouseover="showPopupMenu('popup-menu-2')" onmouseout="hidePopupMenu('popup-menu-2')">
+            <div class="tile-content">
+                <h2>GREY</h2>
+                <img src="./grey.png" alt="Project GREY">
+                <p>Re-creation of the 90s retro arcade game "Space Invaders"</p>
+            </div>
+            <div class="popup-menu" id="popup-menu-2">
+                <a onclick="playVideo('grey.mp4')">Show Demo</a>
+                <a href="https://github.com/SANKHA-SUBHRA2003/Project-G.R.E.Y" target="_blank">Take me to GitHub</a>
+            </div>
+        </div>
+
+        <div class="video-tile" onmouseover="showPopupMenu('popup-menu-3')" onmouseout="hidePopupMenu('popup-menu-3')">
+            <div class="tile-content">
+                <h2>Tower of Hanoi</h2>
+                <img src="./hanoi.png" alt="Tower of Hanoi">
+                <p>Python made Tower of Hanoi game with Pygame library</p>
+            </div>
+            <div class="popup-menu" id="popup-menu-3">
+                <a onclick="playVideo('hanoi.mp4')">Show Demo</a>
+                <a href="https://github.com/SANKHA-SUBHRA2003/Tower-Of-Hanoi" target="_blank">Take me to GitHub</a>
+            </div>
+        </div>
+
+        <div class="video-tile" onmouseover="showPopupMenu('popup-menu-4')" onmouseout="hidePopupMenu('popup-menu-4')">
+            <div class="tile-content">
+                <h2>PONG</h2>
+                <img src="./pong.png" alt="PONG">
+                <p>Python Pong game made with Pygame library</p>
+            </div>
+            <div class="popup-menu" id="popup-menu-4">
+                <a onclick="playVideo('pong.mp4')">Show Demo</a>
+                <a href="https://github.com/SANKHA-SUBHRA2003/Pong" target="_blank">Take me to GitHub</a>
+            </div>
+        </div>
+
+        <div class="video-tile" onmouseover="showPopupMenu('popup-menu-5')" onmouseout="hidePopupMenu('popup-menu-5')">
+            <div class="tile-content">
+                <h2>Pikachu</h2>
+                <img src="./pikachu.png" alt="Pikachu">
+                <p>GUI based pikachu in python</p>
+            </div>
+            <div class="popup-menu" id="popup-menu-5">
+                <a onclick="playVideo('pikachu.mp4')">Show Demo</a>
+                <a href="https://github.com/SANKHA-SUBHRA2003/Pikachu" target="_blank">Take me to GitHub</a>
+            </div>
+        </div>
+        
+        <!-- Add more video tiles as needed -->
+
+    </section>
+
+    <script>
+        function showPopupMenu(popupMenuId) {
+            const popupMenu = document.getElementById(popupMenuId);
+            popupMenu.style.display = 'block';
+        }
+
+        function hidePopupMenu(popupMenuId) {
+            const popupMenu = document.getElementById(popupMenuId);
+            popupMenu.style.display = 'none';
+        }
+
+        function playVideo(videoUrl) {
+            // You can customize this function to play the video using a video player library or HTML5 video element
+            console.log('Playing video: ' + videoUrl);
+            window.location.href = videoUrl;
+        }
+    </script>
+</body>
+</html>
