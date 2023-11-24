@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="./js/particles.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
     <!-- box icons -->      
@@ -29,18 +29,35 @@
     
     <!-- header design -->
     <header class="header">
-      <a href="#" class="logo">Portfolio</a>
+      <a href="#" class="logo" style="color: #0ef; text-shadow: 0 0 10px #0ef;">Portfolio</a>
+
 
       <i class='bx bx-menu' id="menu-icon"></i>
 
-      <nav class="navbar">
-        <a href="#home" style="--i:1;" class="active">Home</a>
-        <a href="#about" style="--i:2;">About</a>
-        <a href="#services"  style="--i:3;">Services</a>
-       
-        <a href="#contact"  style="--i:5;">Contact</a>
-        <link rel="stylesheet" href="./css/particleStyle.css">
-      </nav>
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #1f242d;">
+        <div class="container-fluid">
+          
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                 <li class="nav-item">
+                    <a id="home-link" class="nav-link active" href="#home">Home</a>
+                 </li>
+                 <li class="nav-item">
+                    <a id="about-link" class="nav-link" href="#about">About</a>
+                 </li>
+                 <li class="nav-item">
+                    <a id="services-link" class="nav-link" href="#services">Services</a>
+                 </li>
+                 <li class="nav-item">
+                    <a id="contact-link" class="nav-link" href="#contact">Contact</a>
+                 </li>
+              </ul>
+           </div>
+        </div>
+     </nav>
     </header>
 
     <!-- home section design -->
@@ -243,4 +260,31 @@
     <script src="js/script.js"></script>
     <script src="./js/particles.js"></script>
   </body>
+  <script>
+    // Get the current URL path and highlight the corresponding tab
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+ 
+    // Remove 'active' class from all links
+    document.querySelectorAll('.navbar-nav a').forEach(function(link) {
+       link.classList.remove('active');
+    });
+ 
+    // Add 'active' class to the corresponding link based on the current page
+    if (page === 'home' || page === '') {
+       document.getElementById('home-link').classList.add('active');
+    } else if (page === 'about') {
+       document.getElementById('about-link').classList.add('active');
+    } else if (page === 'services') {
+       document.getElementById('services-link').classList.add('active');
+    } else if (page === 'contact') {
+       document.getElementById('contact-link').classList.add('active');
+    }
+ </script>
+ <style>
+  /* Add this style in your existing <style> tag or custom CSS file */
+  .navbar-nav a.active {
+     color: #0ef !important;
+  }
+</style>
 </html>
